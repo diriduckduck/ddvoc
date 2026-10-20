@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주관식 어원 단어장</title>
+    <style>
+        :root {
+            --bg-color: #f0f4f8;
+            --card-bg: #ffffff;
+            --primary: #3b82f6;
+            --success: #10b981;
+            --danger: #ef4444;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+        }
+        .app-container {
+            width: 100%;
+            max-width: 500px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 24px 20px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+        .header { text-align: center; margin-bottom: 20px; }
+        .header h1 { font-size: 1.4rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+        .header .subtitle { font-size: 0.85rem; color: var(--text-sub); }
+        .date-selector { display: flex; gap: 8px; margin-bottom: 12px; }
+        select, .btn-action {
+            width: 100%; padding: 12px; border-radius: 12px;
+            border: 1px solid #e2e8f0; font-size: 0.95rem; outline: none; background: white;
+        }
+        .btn-action {
+            background-color: var(--primary); color: white; font-weight: 600;
+            border: none; cursor: pointer; margin-bottom: 12px;
+        }
+        .btn-random { background-color: #8b5cf6; }
+        .quiz-card {
+            background-color: #f8fafc; border: 1px solid #e2e8f0;
+            border-radius: 14px; padding: 16px; margin-bottom: 14px;
+        }
+        .word-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .word-text { font-size: 1.15rem; font-weight: 700; color: #0f172a; }
+        .word-root { font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 6px; }
+        input[type="text"] {
+            width: 100%; padding: 12px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 1rem;
+        }
+        input[type="text"]:focus { border-color: var(--primary); outline: none; }
+        .result-box { margin-top: 8px; font-size: 0.9rem; font-weight: 600; display: none; }
+        .result-box.correct { color: var(--success); display: block; }
+        .result-box.incorrect { color: var(--danger); display: block; }
+        .score-summary {
+            text-align: center; font-size: 1.1rem; font-weight: 700;
+            margin-top: 16px; padding: 12px; border-radius: 10px; background: #eff6ff; color: var(--primary); display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="header">
+        <h1>📚 주관식 어원 단어장</h1>
+        <div class="subtitle">AI 자동 연동 학습 시스템</div>
+    </div>
+
+    <div class="date-selector">
+        <select id="dateSelect" onchange="loadSelectedDateQuiz()">
+            <!-- 날짜 자동 로드 -->
+        </select>
+    </div>
+    <button class="btn-action btn-random" onclick="generateRandomQuiz()">🎲 전체 누적 무작위 복습 시험</button>
+
+    <div id="quizArea"></div>
+
+    <button class="btn-action" onclick="gradeQuiz()" id="submitBtn">📝 채점하기</button>
+    <div class="score-summary" id="scoreSummary"></div>
+</div>
+
+<script>
+    const vocabDB = {
+        "2026-10-20": [
+            { word: "simplex", mean: "단순한", root: "ple/plex/ply (접다)" },
+            { word: "simplicity", mean: "단순함", root: "ple/plex/ply (접다)" },
+            { word: "complex", mean: "복잡한", root: "ple/plex/ply (접다)" },
+            { word: "multiplex", mean: "다중의", root: "ple/plex/ply (접다)" },
+            { word: "perplex", mean: "당혹스럽게 하다", root: "ple/plex/ply (접다)" },
+            { word: "duplex", mean: "이중의", root: "ple/plex/ply (접다)" },
+            { word: "triplex", mean: "삼중의", root: "ple/plex/ply (접다)" },
+            { word: "ply", mean: "겹", root: "ple/plex/ply (접다)" },
+            { word: "pliers", mean: "펜치", root: "ple/plex/ply (접다)" },
+            { word: "replenish", mean: "보충하다", root: "ple/plex/ply (채우다)" }
+        ]
+    };
+
+    let activeQuizList = [];
+
+    window.onload = function() {
+        initDateSelect();
+        loadSelectedDateQuiz();
+    };
+
+    function initDateSelect() {
+        const select = document.getElementById('dateSelect');
+        select.innerHTML = '';
+        Object.keys(vocabDB).sort().reverse().forEach(date => {
+            const opt = document.createElement('option');
+            opt.value = date;
+            opt.innerText = `🗓️ ${date} 단어 시험`;
+            select.appendChild(opt);
+        });
+    }
+
+    function renderQuiz(list) {
+        activeQuizList = list;
+        const quizArea = document.getElementById('quizArea');
+        quizArea.innerHTML = '';
+        document.getElementById('scoreSummary').style.display = 'none';
+
+        list.forEach((item, idx) => {
+            const card = document.createElement('div');
+            card.className = 'quiz-card';
+            card.innerHTML = `
+                <div class="word-header">
+                    <span class="word-text">${idx + 1}. ${item.word}</span>
+                    <span class="word-root">${item.root}</span>
+                </div>
+                <input type="text" id="input-${idx}" placeholder="한글 뜻 입력" autocomplete="off">
+                <div class="result-box" id="result-${idx}"></div>
+            `;
+            quizArea.appendChild(card);
+        });
+    }
+
+    function loadSelectedDateQuiz() {
+        const selectedDate = document.getElementById('dateSelect').value;
+        renderQuiz(vocabDB[selectedDate] || []);
+    }
+
+    function generateRandomQuiz() {
+        let allWords = [];
+        Object.values(vocabDB).forEach(words => allWords.push(...words));
+        allWords.sort(() => Math.random() - 0.5);
+        renderQuiz(allWords.slice(0, 10));
+    }
+
+    function gradeQuiz() {
+        let correctCount = 0;
+        activeQuizList.forEach((item, idx) => {
+            const userAns = document.getElementById(`input-${idx}`).value.trim();
+            const resDiv = document.getElementById(`result-${idx}`);
+
+            if (userAns && item.mean.includes(userAns)) {
+                resDiv.className = "result-box correct";
+                resDiv.innerText = `⭕ 정답! (정답: ${item.mean})`;
+                correctCount++;
+            } else {
+                resDiv.className = "result-box incorrect";
+                resDiv.innerText = `❌ 오답 (정답: ${item.mean})`;
+            }
+        });
+
+        const scoreSummary = document.getElementById('scoreSummary');
+        scoreSummary.innerText = `🎉 점수: ${correctCount} / ${activeQuizList.length}`;
+        scoreSummary.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
