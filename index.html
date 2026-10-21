@@ -136,9 +136,8 @@
             card.innerHTML = `
                 <div class="word-header">
                     <span class="word-text">${idx + 1}. ${item.word}</span>
-                    <span class="word-root">${item.root}</span>
                 </div>
-                ${item.pos ? `<div class="word-meta">${item.pos}${item.note ? ' · ⚠️ ' + item.note : ''}</div>` : ''}
+                ${item.pos ? `<div class="word-meta">${item.pos}</div>` : ''}
                 <input type="text" id="input-${idx}" placeholder="한글 뜻 입력" autocomplete="off">
                 <div class="result-box" id="result-${idx}"></div>
             `;
