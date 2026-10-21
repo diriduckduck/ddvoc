@@ -50,6 +50,7 @@
         }
         .word-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
         .word-text { font-size: 1.15rem; font-weight: 700; color: #0f172a; }
+        .word-meta { font-size: 0.8rem; color: var(--text-sub); margin: -4px 0 8px; }
         .word-root { font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 6px; }
         input[type="text"] {
             width: 100%; padding: 12px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 1rem;
@@ -115,7 +116,15 @@
         });
     }
 
+    // 형태 변화 묶음(forms)은 시험 볼 때마다 그중 하나를 무작위로 출제
+    function pickForm(item) {
+        if (!item.forms) return item;
+        const f = item.forms[Math.floor(Math.random() * item.forms.length)];
+        return { ...f, root: item.root, note: item.note };
+    }
+
     function renderQuiz(list) {
+        list = list.map(pickForm);
         activeQuizList = list;
         const quizArea = document.getElementById('quizArea');
         quizArea.innerHTML = '';
@@ -129,6 +138,7 @@
                     <span class="word-text">${idx + 1}. ${item.word}</span>
                     <span class="word-root">${item.root}</span>
                 </div>
+                ${item.pos ? `<div class="word-meta">${item.pos}${item.note ? ' · ⚠️ ' + item.note : ''}</div>` : ''}
                 <input type="text" id="input-${idx}" placeholder="한글 뜻 입력" autocomplete="off">
                 <div class="result-box" id="result-${idx}"></div>
             `;
