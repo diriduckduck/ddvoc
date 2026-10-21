@@ -50,6 +50,7 @@
         }
         .word-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
         .word-text { font-size: 1.15rem; font-weight: 700; color: #0f172a; }
+        .quiz-title { font-size: 0.9rem; font-weight: 600; color: var(--text-sub); margin: 4px 0 10px; }
         .word-meta { font-size: 0.8rem; color: var(--text-sub); margin: -4px 0 8px; }
         .word-root { font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 6px; }
         input[type="text"] {
@@ -78,8 +79,14 @@
             <!-- 날짜 자동 로드 -->
         </select>
     </div>
+    <div class="date-selector">
+        <select id="rootSelect" onchange="loadSelectedRootQuiz()">
+            <!-- 어원 자동 로드 -->
+        </select>
+    </div>
     <button class="btn-action btn-random" onclick="generateRandomQuiz()">🎲 전체 누적 무작위 복습 시험</button>
 
+    <div class="quiz-title" id="quizTitle"></div>
     <div id="quizArea"></div>
 
     <button class="btn-action" onclick="gradeQuiz()" id="submitBtn">📝 채점하기</button>
@@ -102,18 +109,55 @@
             return;
         }
         initDateSelect();
+        initRootSelect();
         loadSelectedDateQuiz();
     };
 
     function initDateSelect() {
         const select = document.getElementById('dateSelect');
-        select.innerHTML = '';
-        Object.keys(vocabDB).sort().reverse().forEach(date => {
+        select.innerHTML = '<option value="">🗓️ 날짜별 시험 선택</option>';
+        const dates = Object.keys(vocabDB).sort().reverse();
+        dates.forEach(date => {
             const opt = document.createElement('option');
             opt.value = date;
             opt.innerText = `🗓️ ${date} 단어 시험`;
             select.appendChild(opt);
         });
+        select.value = dates[0] || '';
+    }
+
+    // 날짜와 상관없이 같은 어원(tag)끼리 모은 목록
+    function rootGroups() {
+        const groups = {};
+        Object.keys(vocabDB).sort().forEach(d => vocabDB[d].forEach(item => {
+            const t = item.tag || '기타';
+            (groups[t] = groups[t] || []).push(item);
+        }));
+        return groups;
+    }
+
+    function initRootSelect() {
+        const select = document.getElementById('rootSelect');
+        const groups = rootGroups();
+        select.innerHTML = '<option value="">🌱 어원별 시험 선택</option>';
+        Object.keys(groups).sort().forEach(t => {
+            const opt = document.createElement('option');
+            opt.value = t;
+            opt.innerText = `🌱 ${t} · ${groups[t].length}문제`;
+            select.appendChild(opt);
+        });
+    }
+
+    function loadSelectedRootQuiz() {
+        const t = document.getElementById('rootSelect').value;
+        if (!t) return;
+        document.getElementById('dateSelect').value = '';
+        setTitle(`🌱 어원: ${t}`);
+        renderQuiz(rootGroups()[t]);
+    }
+
+    function setTitle(text) {
+        document.getElementById('quizTitle').innerText = text;
     }
 
     // 형태 변화 묶음(forms)은 시험 볼 때마다 그중 하나를 무작위로 출제
@@ -137,7 +181,6 @@
                 <div class="word-header">
                     <span class="word-text">${idx + 1}. ${item.word}</span>
                 </div>
-                ${item.pos ? `<div class="word-meta">${item.pos}</div>` : ''}
                 <input type="text" id="input-${idx}" placeholder="한글 뜻 입력" autocomplete="off">
                 <div class="result-box" id="result-${idx}"></div>
             `;
@@ -147,10 +190,16 @@
 
     function loadSelectedDateQuiz() {
         const selectedDate = document.getElementById('dateSelect').value;
+        if (!selectedDate) return;
+        document.getElementById('rootSelect').value = '';
+        setTitle(`🗓️ ${selectedDate} 단어 시험`);
         renderQuiz(vocabDB[selectedDate] || []);
     }
 
     function generateRandomQuiz() {
+        document.getElementById('rootSelect').value = '';
+        document.getElementById('dateSelect').value = '';
+        setTitle('🎲 전체 누적 무작위 복습');
         let allWords = [];
         Object.values(vocabDB).forEach(words => allWords.push(...words));
         allWords.sort(() => Math.random() - 0.5);

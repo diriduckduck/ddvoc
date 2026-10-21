@@ -2,60 +2,166 @@
   {
     "root": "manu (손)",
     "forms": [
-      { "word": "manipulate", "pos": "동사", "mean": "조작하다, 조종하다, 다루다" },
-      { "word": "manipulation", "pos": "명사", "mean": "조작, 조종" },
-      { "word": "manipulator", "pos": "명사", "mean": "조작자, 조종자" },
-      { "word": "manipulative", "pos": "형용사", "mean": "조작하는, 조종하는, 교묘한" }
-    ]
+      {
+        "word": "manipulate",
+        "pos": "동사",
+        "mean": "조작하다, 조종하다, 다루다"
+      },
+      {
+        "word": "manipulation",
+        "pos": "명사",
+        "mean": "조작, 조종"
+      },
+      {
+        "word": "manipulator",
+        "pos": "명사",
+        "mean": "조작자, 조종자"
+      },
+      {
+        "word": "manipulative",
+        "pos": "형용사",
+        "mean": "조작하는, 조종하는, 교묘한"
+      }
+    ],
+    "tag": "manu (손)"
   },
   {
     "root": "com + ple (채우다)",
     "forms": [
-      { "word": "accomplish", "pos": "동사", "mean": "성취하다, 이루다, 완수하다" },
-      { "word": "accomplishable", "pos": "형용사", "mean": "성취할 수 있는, 이룰 수 있는" },
-      { "word": "accomplishment", "pos": "명사", "mean": "성취, 업적, 완수" }
-    ]
+      {
+        "word": "accomplish",
+        "pos": "동사",
+        "mean": "성취하다, 이루다, 완수하다"
+      },
+      {
+        "word": "accomplishable",
+        "pos": "형용사",
+        "mean": "성취할 수 있는, 이룰 수 있는"
+      },
+      {
+        "word": "accomplishment",
+        "pos": "명사",
+        "mean": "성취, 업적, 완수"
+      }
+    ],
+    "tag": "ple (채우다)"
   },
   {
     "root": "com + ple (채우다)",
     "note": "compliment와 혼동 주의",
     "forms": [
-      { "word": "complement", "pos": "동사/명사", "mean": "보완하다, 보충하다, 보완물, 보충물" },
-      { "word": "complementary", "pos": "형용사", "mean": "보완적인, 보충하는" }
-    ]
+      {
+        "word": "complement",
+        "pos": "동사/명사",
+        "mean": "보완하다, 보충하다, 보완물, 보충물"
+      },
+      {
+        "word": "complementary",
+        "pos": "형용사",
+        "mean": "보완적인, 보충하는"
+      }
+    ],
+    "tag": "ple (채우다)"
   },
   {
     "root": "com + ple (채우다)",
     "note": "complement와 혼동 주의",
     "forms": [
-      { "word": "compliment", "pos": "명사/동사", "mean": "칭찬, 찬사, 칭찬하다" },
-      { "word": "complimentary", "pos": "형용사", "mean": "칭찬하는, 무료의" }
-    ]
+      {
+        "word": "compliment",
+        "pos": "명사/동사",
+        "mean": "칭찬, 찬사, 칭찬하다"
+      },
+      {
+        "word": "complimentary",
+        "pos": "형용사",
+        "mean": "칭찬하는, 무료의"
+      }
+    ],
+    "tag": "ple (채우다)"
   },
   {
     "root": "com + ple (채우다)",
     "forms": [
-      { "word": "complete", "pos": "형용사/동사", "mean": "완전한, 완성된, 완료하다, 완성하다" },
-      { "word": "completeness", "pos": "명사", "mean": "완전함, 완전성" },
-      { "word": "completion", "pos": "명사", "mean": "완료, 완성" }
-    ]
+      {
+        "word": "complete",
+        "pos": "형용사/동사",
+        "mean": "완전한, 완성된, 완료하다, 완성하다"
+      },
+      {
+        "word": "completeness",
+        "pos": "명사",
+        "mean": "완전함, 완전성"
+      },
+      {
+        "word": "completion",
+        "pos": "명사",
+        "mean": "완료, 완성"
+      }
+    ],
+    "tag": "ple (채우다)"
   },
   {
     "root": "in (부정) + com + ple (채우다)",
     "forms": [
-      { "word": "incomplete", "pos": "형용사", "mean": "불완전한, 미완성의" },
-      { "word": "incompleteness", "pos": "명사", "mean": "불완전함, 불완전성" }
-    ]
+      {
+        "word": "incomplete",
+        "pos": "형용사",
+        "mean": "불완전한, 미완성의"
+      },
+      {
+        "word": "incompleteness",
+        "pos": "명사",
+        "mean": "불완전함, 불완전성"
+      }
+    ],
+    "tag": "ple (채우다)"
   },
-  { "word": "plus", "pos": "전치사/명사", "mean": "더하기, ~을 더하여, 이점, 플러스", "root": "plus (더 많은)" },
-  { "word": "surplus", "pos": "명사/형용사", "mean": "잉여, 과잉, 흑자, 잉여의", "root": "sur (위에, 넘어) + plus (더 많은)", "note": "plus와 구별" },
-  { "word": "mindless", "pos": "형용사", "mean": "생각 없는, 무심한, 분별없는", "root": "mind (마음) + less (없는)", "note": "mindful과 반대" },
-  { "word": "mindful", "pos": "형용사", "mean": "유념하는, 의식하는, 주의 깊은", "root": "mind (마음) + ful (가득한)", "note": "mindless와 반대" },
+  {
+    "word": "plus",
+    "pos": "전치사/명사",
+    "mean": "더하기, ~을 더하여, 이점, 플러스",
+    "root": "plus (더 많은)",
+    "tag": "plus (더 많은)"
+  },
+  {
+    "word": "surplus",
+    "pos": "명사/형용사",
+    "mean": "잉여, 과잉, 흑자, 잉여의",
+    "root": "sur (위에, 넘어) + plus (더 많은)",
+    "note": "plus와 구별",
+    "tag": "plus (더 많은)"
+  },
+  {
+    "word": "mindless",
+    "pos": "형용사",
+    "mean": "생각 없는, 무심한, 분별없는",
+    "root": "mind (마음) + less (없는)",
+    "note": "mindful과 반대",
+    "tag": "mind (마음)"
+  },
+  {
+    "word": "mindful",
+    "pos": "형용사",
+    "mean": "유념하는, 의식하는, 주의 깊은",
+    "root": "mind (마음) + ful (가득한)",
+    "note": "mindless와 반대",
+    "tag": "mind (마음)"
+  },
   {
     "root": "re (다시) + mind (마음)",
     "forms": [
-      { "word": "remind", "pos": "동사", "mean": "상기시키다, 생각나게 하다" },
-      { "word": "reminder", "pos": "명사", "mean": "상기시키는 것, 알림, 독촉장" }
-    ]
+      {
+        "word": "remind",
+        "pos": "동사",
+        "mean": "상기시키다, 생각나게 하다"
+      },
+      {
+        "word": "reminder",
+        "pos": "명사",
+        "mean": "상기시키는 것, 알림, 독촉장"
+      }
+    ],
+    "tag": "mind (마음)"
   }
 ]
