@@ -86,24 +86,20 @@
 </div>
 
 <script>
-    const vocabDB = {
-        "2026-10-20": [
-            { word: "simplex", mean: "단순한", root: "ple/plex/ply (접다)" },
-            { word: "simplicity", mean: "단순함", root: "ple/plex/ply (접다)" },
-            { word: "complex", mean: "복잡한", root: "ple/plex/ply (접다)" },
-            { word: "multiplex", mean: "다중의", root: "ple/plex/ply (접다)" },
-            { word: "perplex", mean: "당혹스럽게 하다", root: "ple/plex/ply (접다)" },
-            { word: "duplex", mean: "이중의", root: "ple/plex/ply (접다)" },
-            { word: "triplex", mean: "삼중의", root: "ple/plex/ply (접다)" },
-            { word: "ply", mean: "겹", root: "ple/plex/ply (접다)" },
-            { word: "pliers", mean: "펜치", root: "ple/plex/ply (접다)" },
-            { word: "replenish", mean: "보충하다", root: "ple/plex/ply (채우다)" }
-        ]
-    };
-
+    // 단어는 words/YYYY-MM-DD.json 에, 날짜 목록은 words/dates.json 에 있습니다.
+    const vocabDB = {};
     let activeQuizList = [];
 
-    window.onload = function() {
+    window.onload = async function() {
+        try {
+            const dates = await (await fetch('words/dates.json', { cache: 'no-store' })).json();
+            const lists = await Promise.all(dates.map(d =>
+                fetch(`words/${d}.json`, { cache: 'no-store' }).then(r => r.json())));
+            dates.forEach((d, i) => { vocabDB[d] = lists[i]; });
+        } catch (e) {
+            document.getElementById('quizArea').innerText = '단어 파일을 불러오지 못했습니다.';
+            return;
+        }
         initDateSelect();
         loadSelectedDateQuiz();
     };
@@ -158,7 +154,10 @@
             const userAns = document.getElementById(`input-${idx}`).value.trim();
             const resDiv = document.getElementById(`result-${idx}`);
 
-            if (userAns && item.mean.includes(userAns)) {
+            // 공백·기호 무시, 뜻이 "a, b"처럼 여러 개면 그중 하나와 정확히 일치하면 정답
+            const norm = s => s.replace(/[\s.~·()]/g, '');
+            const answers = item.mean.split(/[,;/]/).map(norm).filter(Boolean);
+            if (userAns && answers.includes(norm(userAns))) {
                 resDiv.className = "result-box correct";
                 resDiv.innerText = `⭕ 정답! (정답: ${item.mean})`;
                 correctCount++;
