@@ -138,7 +138,7 @@
     "mean": "생각 없는, 무심한, 분별없는",
     "root": "mind (마음) + less (없는)",
     "note": "mindful과 반대",
-    "tag": "mind (마음)"
+    "tag": "men / mind (마음·생각)"
   },
   {
     "word": "mindful",
@@ -146,7 +146,7 @@
     "mean": "유념하는, 의식하는, 주의 깊은",
     "root": "mind (마음) + ful (가득한)",
     "note": "mindless와 반대",
-    "tag": "mind (마음)"
+    "tag": "men / mind (마음·생각)"
   },
   {
     "root": "re (다시) + mind (마음)",
@@ -162,6 +162,6 @@
         "mean": "상기시키는 것, 알림, 독촉장"
       }
     ],
-    "tag": "mind (마음)"
+    "tag": "men / mind (마음·생각)"
   }
 ]

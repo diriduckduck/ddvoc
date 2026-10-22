@@ -1,0 +1,121 @@
+[
+  {
+    "word": "mind",
+    "pos": "명사/동사",
+    "mean": "마음, 정신, 생각, 꺼리다, 신경 쓰다",
+    "root": "men (마음·생각)",
+    "tag": "men / mind (마음·생각)"
+  },
+  {
+    "root": "men (마음·생각)",
+    "tag": "men / mind (마음·생각)",
+    "forms": [
+      {
+        "word": "automate",
+        "pos": "동사",
+        "mean": "자동화하다"
+      },
+      {
+        "word": "automatic",
+        "pos": "형용사",
+        "mean": "자동의, 자동적인"
+      },
+      {
+        "word": "automatically",
+        "pos": "부사",
+        "mean": "자동으로, 자동적으로"
+      },
+      {
+        "word": "automation",
+        "pos": "명사",
+        "mean": "자동화"
+      }
+    ]
+  },
+  {
+    "root": "men (마음·생각)",
+    "tag": "men / mind (마음·생각)",
+    "forms": [
+      {
+        "word": "comment",
+        "pos": "명사/동사",
+        "mean": "논평, 의견, 언급, 논평하다, 의견을 말하다"
+      },
+      {
+        "word": "commentate",
+        "pos": "동사",
+        "mean": "해설하다, 실황 방송하다"
+      },
+      {
+        "word": "commentator",
+        "pos": "명사",
+        "mean": "해설자, 논평가"
+      },
+      {
+        "word": "commentary",
+        "pos": "명사",
+        "mean": "해설, 논평, 실황 방송"
+      }
+    ]
+  },
+  {
+    "word": "mention",
+    "pos": "동사/명사",
+    "mean": "언급하다, 말하다, 언급",
+    "root": "men (마음·생각)",
+    "tag": "men / mind (마음·생각)"
+  },
+  {
+    "root": "men (마음·생각)",
+    "tag": "men / mind (마음·생각)",
+    "forms": [
+      {
+        "word": "demented",
+        "pos": "형용사",
+        "mean": "정신 이상의, 미친, 제정신이 아닌"
+      },
+      {
+        "word": "dementia",
+        "pos": "명사",
+        "mean": "치매"
+      }
+    ]
+  },
+  {
+    "root": "men (마음·생각)",
+    "tag": "men / mind (마음·생각)",
+    "forms": [
+      {
+        "word": "mental",
+        "pos": "형용사",
+        "mean": "정신의, 정신적인, 마음의"
+      },
+      {
+        "word": "mentality",
+        "pos": "명사",
+        "mean": "사고방식, 정신 상태, 심리"
+      }
+    ]
+  },
+  {
+    "word": "mentor",
+    "pos": "명사",
+    "mean": "멘토, 조언자, 스승",
+    "root": "men (마음·생각)",
+    "tag": "men / mind (마음·생각)"
+  },
+  {
+    "word": "mentee",
+    "pos": "명사",
+    "mean": "멘티, 조언을 받는 사람, 제자",
+    "root": "men (마음·생각)",
+    "tag": "men / mind (마음·생각)"
+  },
+  {
+    "word": "demean",
+    "pos": "동사",
+    "mean": "품위를 떨어뜨리다, 비하하다, 깎아내리다",
+    "root": "men (마음·생각)",
+    "tag": "men / mind (마음·생각)"
+  }
+]
