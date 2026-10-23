@@ -1,0 +1,129 @@
+[
+  {
+    "word": "meanwhile",
+    "pos": "부사/명사",
+    "mean": "그동안에, 그 사이에, 한편",
+    "root": "mean (중간)",
+    "tag": "medi / mean (중간)"
+  },
+  {
+    "word": "meantime",
+    "pos": "명사/부사",
+    "mean": "그동안, 그 사이, 한편",
+    "root": "mean (중간)",
+    "tag": "medi / mean (중간)"
+  },
+  {
+    "root": "mean (의도하다)",
+    "tag": "men / mind (마음·생각)",
+    "forms": [
+      {
+        "word": "mean",
+        "pos": "동사/형용사",
+        "mean": "의미하다, 의도하다, 비열한, 인색한, 평균의"
+      },
+      {
+        "word": "meaning",
+        "pos": "명사",
+        "mean": "의미, 뜻"
+      }
+    ]
+  },
+  {
+    "word": "meaningful",
+    "pos": "형용사",
+    "mean": "의미 있는, 중요한, 의미심장한",
+    "root": "mean (의도하다) + ful",
+    "tag": "men / mind (마음·생각)"
+  },
+  {
+    "word": "meaningless",
+    "pos": "형용사",
+    "mean": "의미 없는, 무의미한",
+    "root": "mean (의도하다) + less",
+    "tag": "men / mind (마음·생각)"
+  },
+  {
+    "word": "demeanor",
+    "pos": "명사",
+    "mean": "태도, 품행, 처신, 행실",
+    "root": "de + mener (이끌다)",
+    "tag": "men (이끌다)"
+  },
+  {
+    "root": "a + mener (이끌다)",
+    "tag": "men (이끌다)",
+    "forms": [
+      {
+        "word": "amenable",
+        "pos": "형용사",
+        "mean": "순종하는, 잘 따르는, 받아들이는, 다루기 쉬운"
+      },
+      {
+        "word": "amenably",
+        "pos": "부사",
+        "mean": "순순히, 고분고분하게"
+      },
+      {
+        "word": "amenability",
+        "pos": "명사",
+        "mean": "순종, 순응성"
+      }
+    ]
+  },
+  {
+    "word": "acumen",
+    "pos": "명사",
+    "mean": "예리함, 통찰력, 감각, 총명",
+    "root": "acu (날카로운)",
+    "tag": "acu (날카로운)"
+  },
+  {
+    "root": "min (돌출하다)",
+    "tag": "min (돌출하다)",
+    "forms": [
+      {
+        "word": "menace",
+        "pos": "명사/동사",
+        "mean": "위협, 협박, 위협하다"
+      },
+      {
+        "word": "menacing",
+        "pos": "형용사",
+        "mean": "위협적인, 험악한"
+      }
+    ]
+  },
+  {
+    "root": "im + min (돌출하다)",
+    "tag": "min (돌출하다)",
+    "forms": [
+      {
+        "word": "imminent",
+        "pos": "형용사",
+        "mean": "임박한, 곧 일어날, 절박한"
+      },
+      {
+        "word": "imminence",
+        "pos": "명사",
+        "mean": "임박, 절박"
+      }
+    ]
+  },
+  {
+    "root": "pro + min (돌출하다)",
+    "tag": "min (돌출하다)",
+    "forms": [
+      {
+        "word": "prominent",
+        "pos": "형용사",
+        "mean": "두드러진, 저명한, 유명한, 돌출된"
+      },
+      {
+        "word": "prominence",
+        "pos": "명사",
+        "mean": "두드러짐, 명성, 유명함, 돌출"
+      }
+    ]
+  }
+]
