@@ -1,0 +1,183 @@
+[
+  {
+    "root": "pre + e + min (돌출하다)",
+    "tag": "min (돌출하다)",
+    "forms": [
+      {
+        "word": "preeminent",
+        "pos": "형용사",
+        "mean": "뛰어난, 탁월한, 걸출한"
+      },
+      {
+        "word": "preeminence",
+        "pos": "명사",
+        "mean": "탁월함, 걸출함, 우위"
+      }
+    ]
+  },
+  {
+    "root": "e + min (돌출하다)",
+    "tag": "min (돌출하다)",
+    "forms": [
+      {
+        "word": "eminent",
+        "pos": "형용사",
+        "mean": "저명한, 탁월한, 뛰어난"
+      },
+      {
+        "word": "eminence",
+        "pos": "명사",
+        "mean": "명성, 저명, 탁월함, 높은 지위"
+      }
+    ]
+  },
+  {
+    "root": "mine (광산)",
+    "tag": "mine (광산)",
+    "forms": [
+      {
+        "word": "mine",
+        "pos": "명사/동사",
+        "mean": "광산, 지뢰, 채굴하다, 나의 것"
+      },
+      {
+        "word": "miner",
+        "pos": "명사",
+        "mean": "광부"
+      }
+    ]
+  },
+  {
+    "word": "mineral",
+    "pos": "명사/형용사",
+    "mean": "광물, 무기물, 광물의",
+    "root": "mine (광산)",
+    "tag": "mine (광산)"
+  },
+  {
+    "word": "undermine",
+    "pos": "동사",
+    "mean": "약화시키다, 훼손하다, 밑을 파다",
+    "root": "under + mine (광산)",
+    "tag": "mine (광산)"
+  },
+  {
+    "root": "min (작은)",
+    "tag": "min (작은)",
+    "forms": [
+      {
+        "word": "minimum",
+        "pos": "명사/형용사",
+        "mean": "최소, 최저, 최소의"
+      },
+      {
+        "word": "minimal",
+        "pos": "형용사",
+        "mean": "최소의, 아주 적은"
+      },
+      {
+        "word": "minimize",
+        "pos": "동사",
+        "mean": "최소화하다, 축소하다"
+      },
+      {
+        "word": "minimization",
+        "pos": "명사",
+        "mean": "최소화"
+      }
+    ]
+  },
+  {
+    "root": "min (작은)",
+    "tag": "min (작은)",
+    "forms": [
+      {
+        "word": "minor",
+        "pos": "형용사/명사",
+        "mean": "작은, 사소한, 미성년자, 부전공"
+      },
+      {
+        "word": "minority",
+        "pos": "명사",
+        "mean": "소수, 소수 집단, 미성년"
+      }
+    ]
+  },
+  {
+    "word": "minister",
+    "pos": "명사",
+    "mean": "장관, 목사, 성직자",
+    "root": "min (작은)",
+    "tag": "min (작은)"
+  },
+  {
+    "root": "ad + min (작은)",
+    "tag": "min (작은)",
+    "forms": [
+      {
+        "word": "administer",
+        "pos": "동사",
+        "mean": "관리하다, 운영하다, 집행하다, 투여하다"
+      },
+      {
+        "word": "administration",
+        "pos": "명사",
+        "mean": "관리, 행정, 경영, 행정부, 투여"
+      },
+      {
+        "word": "administrator",
+        "pos": "명사",
+        "mean": "관리자, 행정관"
+      }
+    ]
+  },
+  {
+    "root": "di + min (작은)",
+    "tag": "min (작은)",
+    "forms": [
+      {
+        "word": "diminish",
+        "pos": "동사",
+        "mean": "줄어들다, 감소하다, 줄이다"
+      },
+      {
+        "word": "diminution",
+        "pos": "명사",
+        "mean": "감소, 축소"
+      },
+      {
+        "word": "diminutive",
+        "pos": "형용사",
+        "mean": "아주 작은, 소형의"
+      }
+    ]
+  },
+  {
+    "root": "min (작은)",
+    "tag": "min (작은)",
+    "forms": [
+      {
+        "word": "miniature",
+        "pos": "명사/형용사",
+        "mean": "축소 모형, 미니어처, 소형의"
+      },
+      {
+        "word": "miniaturize",
+        "pos": "동사",
+        "mean": "소형화하다"
+      },
+      {
+        "word": "miniaturization",
+        "pos": "명사",
+        "mean": "소형화"
+      }
+    ]
+  },
+  {
+    "word": "microminiature",
+    "pos": "형용사/명사",
+    "mean": "초소형의, 초소형 장치",
+    "root": "micro + min (작은)",
+    "tag": "min (작은)"
+  }
+]
