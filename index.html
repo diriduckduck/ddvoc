@@ -160,6 +160,16 @@
         document.getElementById('quizTitle').innerText = text;
     }
 
+    // 피셔-예이츠 셔플: 시험 볼 때마다 문제 순서를 무작위로
+    function shuffle(arr) {
+        const a = arr.slice();
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
     // 형태 변화 묶음(forms)은 시험 볼 때마다 그중 하나를 무작위로 출제
     function pickForm(item) {
         if (!item.forms) return item;
@@ -168,7 +178,7 @@
     }
 
     function renderQuiz(list) {
-        list = list.map(pickForm);
+        list = shuffle(list.map(pickForm));
         activeQuizList = list;
         const quizArea = document.getElementById('quizArea');
         quizArea.innerHTML = '';
@@ -202,8 +212,7 @@
         setTitle('🎲 전체 누적 무작위 복습');
         let allWords = [];
         Object.values(vocabDB).forEach(words => allWords.push(...words));
-        allWords.sort(() => Math.random() - 0.5);
-        renderQuiz(allWords.slice(0, 10));
+        renderQuiz(shuffle(allWords).slice(0, 10));
     }
 
     function gradeQuiz() {
