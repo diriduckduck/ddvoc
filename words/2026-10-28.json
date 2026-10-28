@@ -1,0 +1,74 @@
+[
+  {
+    "word": "mince",
+    "pos": "동사/명사",
+    "mean": "잘게 다지다, 저미다, 다진 고기",
+    "root": "min (작은)",
+    "tag": "min (작은)"
+  },
+  {
+    "word": "mini",
+    "pos": "명사/형용사",
+    "mean": "소형, 소형의, 작은",
+    "root": "min (작은)",
+    "tag": "min (작은)"
+  },
+  {
+    "word": "minus",
+    "pos": "전치사/형용사/명사",
+    "mean": "빼기, ~을 뺀, 영하의, 마이너스, 불리한 점",
+    "root": "min (작은)",
+    "tag": "min (작은)"
+  },
+  {
+    "word": "minute",
+    "pos": "명사/형용사",
+    "mean": "분, 잠깐, 순간, 회의록, 극히 작은, 미세한, 상세한",
+    "root": "min (작은)",
+    "tag": "min (작은)"
+  },
+  {
+    "word": "pun",
+    "pos": "명사/동사",
+    "mean": "말장난, 동음이의어 익살, 말장난하다",
+    "root": "pun (벌)",
+    "tag": "pen / pun (벌·후회)"
+  },
+  {
+    "word": "penitentiary",
+    "pos": "명사",
+    "mean": "교도소, 감옥",
+    "root": "pen (벌·후회)",
+    "tag": "pen / pun (벌·후회)"
+  },
+  {
+    "root": "pen (벌·후회)",
+    "tag": "pen / pun (벌·후회)",
+    "forms": [
+      {
+        "word": "penitent",
+        "pos": "형용사/명사",
+        "mean": "뉘우치는, 참회하는, 참회자"
+      },
+      {
+        "word": "penitence",
+        "pos": "명사",
+        "mean": "뉘우침, 참회, 회개"
+      }
+    ]
+  },
+  {
+    "word": "impenitent",
+    "pos": "형용사",
+    "mean": "뉘우치지 않는, 회개하지 않는",
+    "root": "im (부정) + pen (벌·후회)",
+    "tag": "pen / pun (벌·후회)"
+  },
+  {
+    "word": "penance",
+    "pos": "명사",
+    "mean": "속죄, 참회, 고행",
+    "root": "pen (벌·후회)",
+    "tag": "pen / pun (벌·후회)"
+  }
+]
