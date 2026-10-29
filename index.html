@@ -50,6 +50,20 @@
         }
         .word-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
         .word-text { font-size: 1.15rem; font-weight: 700; color: #0f172a; }
+        .review-banner {
+            position: sticky; top: 0; z-index: 10;
+            background: #fff7ed; border: 1px solid #fdba74; border-radius: 14px;
+            padding: 10px 12px; margin: -8px 0 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .review-banner .rb-title { font-size: 0.85rem; font-weight: 700; color: #c2410c; margin-bottom: 6px; }
+        .review-banner .rb-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+        .rb-chip {
+            border: none; border-radius: 999px; padding: 6px 12px; font-size: 0.85rem; font-weight: 600;
+            background: #f97316; color: white; cursor: pointer;
+        }
+        .rb-chip.new { background: var(--primary); }
+        .rb-chip.wrong { background: var(--danger); }
+        .btn-wrong { background-color: var(--danger); }
         .quiz-title { font-size: 0.9rem; font-weight: 600; color: var(--text-sub); margin: 4px 0 10px; }
         .word-meta { font-size: 0.8rem; color: var(--text-sub); margin: -4px 0 8px; }
         .word-root { font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 6px; }
@@ -69,6 +83,10 @@
 <body>
 
 <div class="app-container">
+    <div class="review-banner" id="reviewBanner" style="display:none">
+        <div class="rb-title">⏰ 오늘 다시 볼 시험</div>
+        <div class="rb-chips" id="reviewChips"></div>
+    </div>
     <div class="header">
         <h1>📚 주관식 어원 단어장</h1>
         <div class="subtitle">AI 자동 연동 학습 시스템</div>
@@ -85,6 +103,7 @@
         </select>
     </div>
     <button class="btn-action btn-random" onclick="generateRandomQuiz()">🎲 전체 누적 무작위 복습 시험</button>
+    <button class="btn-action btn-wrong" onclick="loadWrongQuiz()" id="wrongBtn">📕 오답 노트</button>
 
     <div class="quiz-title" id="quizTitle"></div>
     <div id="quizArea"></div>
@@ -97,6 +116,105 @@
     // 단어는 words/YYYY-MM-DD.json 에, 날짜 목록은 words/dates.json 에 있습니다.
     const vocabDB = {};
     let activeQuizList = [];
+    let currentMode = { type: 'date' };   // date | root | random | wrong
+
+    // ---- 기기별 저장 (이 브라우저에만 남음) ----
+    function load(key, fallback) {
+        try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch (e) { return fallback; }
+    }
+    function save(key, val) {
+        try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {}
+    }
+
+    // ---- 간격 반복: 시험 본 날로부터 1, 2, 4, 7, 14, 28일 뒤 ----
+    const INTERVALS = [1, 2, 4, 7, 14, 28];
+    function today() {
+        const d = new Date();
+        return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+    function daysBetween(a, b) {   // b - a (일)
+        const [y1, m1, d1] = a.split('-').map(Number), [y2, m2, d2] = b.split('-').map(Number);
+        return Math.round((Date.UTC(y2, m2 - 1, d2) - Date.UTC(y1, m1 - 1, d1)) / 86400000);
+    }
+    // 기록이 없는 날짜는 "단어를 받은 날 시험 봤다"고 보고 다음 복습일부터 시작
+    function getSchedule(date) {
+        const saved = load('ddvoc-srs', {})[date];
+        if (saved) return { ...saved, saved: true };
+        const diff = daysBetween(date, today());
+        let step = INTERVALS.findIndex(n => diff <= n);
+        if (step === -1) step = INTERVALS.length;
+        return { base: date, step, saved: false };
+    }
+    function dueInfo(date) {
+        const s = getSchedule(date);
+        if (s.step >= INTERVALS.length) return null;
+        const late = daysBetween(s.base, today()) - INTERVALS[s.step];
+        return late >= 0 ? { n: INTERVALS[s.step], late } : null;
+    }
+    function recordDateQuiz(date) {
+        const all = load('ddvoc-srs', {});
+        const s = getSchedule(date);
+        const t = today();
+        if (!s.saved && !dueInfo(date)) {
+            all[date] = { base: t, step: 0 };          // 처음 본 시험 → 오늘부터 카운트
+        } else if (dueInfo(date)) {
+            const diff = daysBetween(s.base, t);
+            let step = INTERVALS.findIndex(n => n > diff);
+            all[date] = { base: s.base, step: step === -1 ? INTERVALS.length : step };
+        } else {
+            return;                                     // 복습일이 아니면 일정 유지
+        }
+        save('ddvoc-srs', all);
+    }
+
+    // 처음 열었을 때 지난 날짜의 일정을 고정 → 복습을 건너뛰어도 배너에 남음
+    function seedSchedules() {
+        const all = load('ddvoc-srs', {});
+        const t = today();
+        Object.keys(vocabDB).forEach(date => {
+            if (!all[date] && date < t) {
+                const s = getSchedule(date);
+                all[date] = { base: s.base, step: s.step };
+            }
+        });
+        save('ddvoc-srs', all);
+    }
+
+    function renderBanner() {
+        const chips = [];
+        const t = today();
+        Object.keys(vocabDB).sort().forEach(date => {
+            const s = getSchedule(date);
+            if (date === t && !s.saved) {
+                chips.push(`<button class="rb-chip new" onclick="goDate('${date}')">🆕 오늘 단어</button>`);
+                return;
+            }
+            const due = dueInfo(date);
+            if (due) chips.push(`<button class="rb-chip" onclick="goDate('${date}')">${date.slice(5).replace('-', '/')} · ${due.n}일차${due.late ? ` (+${due.late})` : ''}</button>`);
+        });
+        const wrongN = Object.keys(load('ddvoc-wrong', {})).length;
+        if (wrongN) chips.push(`<button class="rb-chip wrong" onclick="loadWrongQuiz()">📕 오답 ${wrongN}</button>`);
+        document.getElementById('reviewChips').innerHTML = chips.join('');
+        document.getElementById('reviewBanner').style.display = chips.length ? 'block' : 'none';
+        document.getElementById('wrongBtn').innerText = `📕 오답 노트 (${wrongN})`;
+    }
+
+    function goDate(date) {
+        document.getElementById('dateSelect').value = date;
+        loadSelectedDateQuiz();
+        document.getElementById('quizTitle').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ---- 오답 노트: 틀리면 쌓이고, 어디서든 맞히면 빠짐 ----
+    function loadWrongQuiz() {
+        const list = Object.values(load('ddvoc-wrong', {}));
+        document.getElementById('dateSelect').value = '';
+        document.getElementById('rootSelect').value = '';
+        currentMode = { type: 'wrong' };
+        setTitle(list.length ? `📕 오답 노트 · ${list.length}문제` : '📕 오답 노트가 비어 있습니다');
+        renderQuiz(list);
+        document.getElementById('quizTitle').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
     window.onload = async function() {
         try {
@@ -110,7 +228,9 @@
         }
         initDateSelect();
         initRootSelect();
+        seedSchedules();
         loadSelectedDateQuiz();
+        renderBanner();
     };
 
     function initDateSelect() {
@@ -152,6 +272,7 @@
         const t = document.getElementById('rootSelect').value;
         if (!t) return;
         document.getElementById('dateSelect').value = '';
+        currentMode = { type: 'root' };
         setTitle(`🌱 어원: ${t}`);
         renderQuiz(rootGroups()[t]);
     }
@@ -202,13 +323,16 @@
         const selectedDate = document.getElementById('dateSelect').value;
         if (!selectedDate) return;
         document.getElementById('rootSelect').value = '';
-        setTitle(`🗓️ ${selectedDate} 단어 시험`);
+        currentMode = { type: 'date', date: selectedDate };
+        const due = dueInfo(selectedDate);
+        setTitle(`🗓️ ${selectedDate} 단어 시험${due ? ` · ${due.n}일차 복습` : ''}`);
         renderQuiz(vocabDB[selectedDate] || []);
     }
 
     function generateRandomQuiz() {
         document.getElementById('rootSelect').value = '';
         document.getElementById('dateSelect').value = '';
+        currentMode = { type: 'random' };
         setTitle('🎲 전체 누적 무작위 복습');
         let allWords = [];
         Object.values(vocabDB).forEach(words => allWords.push(...words));
@@ -217,6 +341,7 @@
 
     function gradeQuiz() {
         let correctCount = 0;
+        const wrong = load('ddvoc-wrong', {});
         activeQuizList.forEach((item, idx) => {
             const userAns = document.getElementById(`input-${idx}`).value.trim();
             const resDiv = document.getElementById(`result-${idx}`);
@@ -228,7 +353,10 @@
                 resDiv.className = "result-box correct";
                 resDiv.innerText = `⭕ 정답! (정답: ${item.mean})`;
                 correctCount++;
+                delete wrong[item.word];
             } else {
+                wrong[item.word] = { word: item.word, mean: item.mean, tag: item.tag,
+                                     miss: ((wrong[item.word] || {}).miss || 0) + 1 };
                 resDiv.className = "result-box incorrect";
                 resDiv.innerText = `❌ 오답 (정답: ${item.mean})`;
             }
@@ -237,6 +365,10 @@
         const scoreSummary = document.getElementById('scoreSummary');
         scoreSummary.innerText = `🎉 점수: ${correctCount} / ${activeQuizList.length}`;
         scoreSummary.style.display = 'block';
+
+        save('ddvoc-wrong', wrong);
+        if (currentMode.type === 'date') recordDateQuiz(currentMode.date);
+        renderBanner();
     }
 </script>
 
