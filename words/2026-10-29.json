@@ -1,0 +1,139 @@
+[
+  {
+    "root": "pen (벌·고통)",
+    "tag": "pen / pun (벌·후회)",
+    "forms": [
+      {
+        "word": "pain",
+        "pos": "명사",
+        "mean": "고통, 아픔, 통증, 수고"
+      },
+      {
+        "word": "painful",
+        "pos": "형용사",
+        "mean": "고통스러운, 아픈, 괴로운"
+      }
+    ]
+  },
+  {
+    "word": "impunity",
+    "pos": "명사",
+    "mean": "처벌받지 않음, 면책, 무사",
+    "root": "im (부정) + pun (벌)",
+    "tag": "pen / pun (벌·후회)"
+  },
+  {
+    "root": "pun (벌)",
+    "tag": "pen / pun (벌·후회)",
+    "forms": [
+      {
+        "word": "punish",
+        "pos": "동사",
+        "mean": "처벌하다, 벌하다"
+      },
+      {
+        "word": "punishment",
+        "pos": "명사",
+        "mean": "처벌, 벌, 형벌"
+      },
+      {
+        "word": "punitive",
+        "pos": "형용사",
+        "mean": "처벌의, 징벌적인, 가혹한"
+      }
+    ]
+  },
+  {
+    "root": "re + pen (후회)",
+    "tag": "pen / pun (벌·후회)",
+    "forms": [
+      {
+        "word": "repent",
+        "pos": "동사",
+        "mean": "뉘우치다, 후회하다, 회개하다"
+      },
+      {
+        "word": "repentant",
+        "pos": "형용사",
+        "mean": "뉘우치는, 회개하는"
+      },
+      {
+        "word": "repentance",
+        "pos": "명사",
+        "mean": "뉘우침, 후회, 회개"
+      }
+    ]
+  },
+  {
+    "word": "unrepentant",
+    "pos": "형용사",
+    "mean": "뉘우치지 않는, 회개하지 않는",
+    "root": "un (부정) + re + pen (후회)",
+    "tag": "pen / pun (벌·후회)"
+  },
+  {
+    "root": "pen (벌)",
+    "tag": "pen / pun (벌·후회)",
+    "forms": [
+      {
+        "word": "penal",
+        "pos": "형용사",
+        "mean": "형벌의, 형사상의, 처벌의"
+      },
+      {
+        "word": "penalty",
+        "pos": "명사",
+        "mean": "처벌, 형벌, 벌금, 위약금, 페널티"
+      },
+      {
+        "word": "penalize",
+        "pos": "동사",
+        "mean": "처벌하다, 불이익을 주다, 벌칙을 주다"
+      },
+      {
+        "word": "penalization",
+        "pos": "명사",
+        "mean": "처벌, 불이익, 벌칙 부과"
+      }
+    ]
+  },
+  {
+    "root": "penetr (안으로)",
+    "tag": "뚫다·찌르다 (penetr / pierce / pung)",
+    "forms": [
+      {
+        "word": "penetrate",
+        "pos": "동사",
+        "mean": "관통하다, 침투하다, 꿰뚫다, 간파하다"
+      },
+      {
+        "word": "penetration",
+        "pos": "명사",
+        "mean": "관통, 침투, 통찰력"
+      }
+    ]
+  },
+  {
+    "root": "per + tund (뚫다)",
+    "tag": "뚫다·찌르다 (penetr / pierce / pung)",
+    "forms": [
+      {
+        "word": "pierce",
+        "pos": "동사",
+        "mean": "뚫다, 찌르다, 관통하다"
+      },
+      {
+        "word": "piercing",
+        "pos": "형용사/명사",
+        "mean": "꿰뚫는, 날카로운, 귀청을 찢는 듯한, 피어싱"
+      }
+    ]
+  },
+  {
+    "word": "expunge",
+    "pos": "동사",
+    "mean": "지우다, 삭제하다, 말소하다",
+    "root": "ex (밖으로) + pung (찌르다)",
+    "tag": "뚫다·찌르다 (penetr / pierce / pung)"
+  }
+]
