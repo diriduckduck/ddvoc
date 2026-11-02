@@ -1,0 +1,142 @@
+[
+  {
+    "root": "pung (찌르다)",
+    "tag": "pung / punct (찌르다·점)",
+    "forms": [
+      {
+        "word": "pungent",
+        "pos": "형용사",
+        "mean": "톡 쏘는, 얼얼한, 신랄한, 날카로운"
+      },
+      {
+        "word": "pungency",
+        "pos": "명사",
+        "mean": "자극성, 톡 쏘는 맛, 신랄함"
+      }
+    ]
+  },
+  {
+    "word": "punch",
+    "pos": "동사/명사",
+    "mean": "주먹으로 치다, 구멍을 뚫다, 펀치, 타격",
+    "root": "pung (찌르다)",
+    "tag": "pung / punct (찌르다·점)"
+  },
+  {
+    "word": "counterpunch",
+    "pos": "명사/동사",
+    "mean": "반격, 카운터펀치, 반격하다",
+    "root": "counter (반대) + punch",
+    "tag": "pung / punct (찌르다·점)"
+  },
+  {
+    "root": "punct (점)",
+    "tag": "pung / punct (찌르다·점)",
+    "forms": [
+      {
+        "word": "punctual",
+        "pos": "형용사",
+        "mean": "시간을 엄수하는, 정각의"
+      },
+      {
+        "word": "punctuality",
+        "pos": "명사",
+        "mean": "시간 엄수"
+      }
+    ]
+  },
+  {
+    "word": "puncture",
+    "pos": "명사/동사",
+    "mean": "펑크, 구멍, 구멍을 내다, 찌르다",
+    "root": "punct (찌르다)",
+    "tag": "pung / punct (찌르다·점)"
+  },
+  {
+    "root": "acu (바늘) + punct (찌르다)",
+    "tag": "pung / punct (찌르다·점)",
+    "forms": [
+      {
+        "word": "acupuncture",
+        "pos": "명사",
+        "mean": "침술, 침 치료"
+      },
+      {
+        "word": "acupuncturist",
+        "pos": "명사",
+        "mean": "침술사, 한의사"
+      }
+    ]
+  },
+  {
+    "root": "dis + ap + point",
+    "tag": "pung / punct (찌르다·점)",
+    "forms": [
+      {
+        "word": "disappoint",
+        "pos": "동사",
+        "mean": "실망시키다, 낙담시키다"
+      },
+      {
+        "word": "disappointment",
+        "pos": "명사",
+        "mean": "실망, 낙담"
+      }
+    ]
+  },
+  {
+    "root": "ap + point",
+    "tag": "pung / punct (찌르다·점)",
+    "forms": [
+      {
+        "word": "appoint",
+        "pos": "동사",
+        "mean": "임명하다, 지명하다, 정하다, 약속하다"
+      },
+      {
+        "word": "appointment",
+        "pos": "명사",
+        "mean": "약속, 예약, 임명, 지명"
+      }
+    ]
+  },
+  {
+    "root": "point (점)",
+    "tag": "pung / punct (찌르다·점)",
+    "forms": [
+      {
+        "word": "point",
+        "pos": "명사/동사",
+        "mean": "점, 요점, 끝, 가리키다, 겨누다"
+      },
+      {
+        "word": "pointer",
+        "pos": "명사",
+        "mean": "지시봉, 포인터, 조언, 지침"
+      }
+    ]
+  },
+  {
+    "word": "pointless",
+    "pos": "형용사",
+    "mean": "무의미한, 쓸모없는, 요점 없는",
+    "root": "point + less",
+    "tag": "pung / punct (찌르다·점)"
+  },
+  {
+    "root": "oxy (날카로운) + moron (둔한)",
+    "tag": "acu / oxy (날카로운)",
+    "forms": [
+      {
+        "word": "oxymoron",
+        "pos": "명사",
+        "mean": "모순 어법, 형용 모순"
+      },
+      {
+        "word": "oxymoronic",
+        "pos": "형용사",
+        "mean": "모순 어법의, 모순된"
+      }
+    ]
+  }
+]

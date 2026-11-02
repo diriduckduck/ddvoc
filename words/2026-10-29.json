@@ -99,7 +99,7 @@
   },
   {
     "root": "penetr (안으로)",
-    "tag": "뚫다·찌르다 (penetr / pierce / pung)",
+    "tag": "뚫다 (penetr / pierce)",
     "forms": [
       {
         "word": "penetrate",
@@ -115,7 +115,7 @@
   },
   {
     "root": "per + tund (뚫다)",
-    "tag": "뚫다·찌르다 (penetr / pierce / pung)",
+    "tag": "뚫다 (penetr / pierce)",
     "forms": [
       {
         "word": "pierce",
@@ -134,6 +134,6 @@
     "pos": "동사",
     "mean": "지우다, 삭제하다, 말소하다",
     "root": "ex (밖으로) + pung (찌르다)",
-    "tag": "뚫다·찌르다 (penetr / pierce / pung)"
+    "tag": "pung / punct (찌르다·점)"
   }
 ]
