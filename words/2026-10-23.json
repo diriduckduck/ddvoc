@@ -4,14 +4,16 @@
     "pos": "부사/명사",
     "mean": "그동안에, 그 사이에, 한편",
     "root": "mean (중간)",
-    "tag": "medi / mean (중간)"
+    "tag": "medi / mean (중간)",
+    "origin": "mean(중간의, 라틴어 medianus) + while(동안) → '중간의 시간에' → 그동안에, 한편. '의미하다'의 mean과는 다른 단어입니다."
   },
   {
     "word": "meantime",
     "pos": "명사/부사",
     "mean": "그동안, 그 사이, 한편",
     "root": "mean (중간)",
-    "tag": "medi / mean (중간)"
+    "tag": "medi / mean (중간)",
+    "origin": "mean(중간의) + time(시간) → '중간 시간' → 그동안, 그 사이. meanwhile과 거의 같은 뜻입니다."
   },
   {
     "root": "mean (의도하다)",
@@ -27,28 +29,32 @@
         "pos": "명사",
         "mean": "의미, 뜻"
       }
-    ]
+    ],
+    "origin": "'의미하다'의 mean은 고대 영어 mænan(마음에 두다, 의도하다)에서 왔고 *men-(생각하다)과 연결됩니다. '비열한'과 '평균의' mean은 각각 다른 어원의 동음이의어입니다."
   },
   {
     "word": "meaningful",
     "pos": "형용사",
     "mean": "의미 있는, 중요한, 의미심장한",
     "root": "mean (의도하다) + ful",
-    "tag": "men / mind (마음·생각)"
+    "tag": "men / mind (마음·생각)",
+    "origin": "meaning(의미) + -ful(가득한) → 의미가 가득한 → 의미 있는, 중요한."
   },
   {
     "word": "meaningless",
     "pos": "형용사",
     "mean": "의미 없는, 무의미한",
     "root": "mean (의도하다) + less",
-    "tag": "men / mind (마음·생각)"
+    "tag": "men / mind (마음·생각)",
+    "origin": "meaning(의미) + -less(없는) → 의미 없는, 무의미한."
   },
   {
     "word": "demeanor",
     "pos": "명사",
     "mean": "태도, 품행, 처신, 행실",
     "root": "de + mener (이끌다)",
-    "tag": "men (이끌다)"
+    "tag": "men (이끌다)",
+    "origin": "고대 프랑스어 demener(이끌다, 처신하다, 라틴어 minare '가축을 몰다') → 자기 자신을 이끄는 방식 → 태도, 품행. men(마음)과는 다른 '이끌다' 계열입니다."
   },
   {
     "root": "a + mener (이끌다)",
@@ -69,14 +75,16 @@
         "pos": "명사",
         "mean": "순종, 순응성"
       }
-    ]
+    ],
+    "origin": "a(~쪽으로) + mener(이끌다) → '이끄는 쪽으로 따라오는' → 순종하는, 잘 받아들이는."
   },
   {
     "word": "acumen",
     "pos": "명사",
     "mean": "예리함, 통찰력, 감각, 총명",
     "root": "acu (날카로운)",
-    "tag": "acu / oxy (날카로운)"
+    "tag": "acu / oxy (날카로운)",
+    "origin": "라틴어 acuere(날카롭게 하다)에서 온 acumen(뾰족한 끝) → 머리가 날카로움 → 예리함, 통찰력. acute(날카로운, 급성의)와 같은 뿌리입니다."
   },
   {
     "root": "min (돌출하다)",
@@ -92,7 +100,8 @@
         "pos": "형용사",
         "mean": "위협적인, 험악한"
       }
-    ]
+    ],
+    "origin": "라틴어 minae(돌출부, 위협)에서 → 툭 튀어나와 다가오는 것 → 위협. 낭떠러지 끝이 머리 위로 튀어나온 모습을 떠올리면 됩니다."
   },
   {
     "root": "im + min (돌출하다)",
@@ -108,7 +117,8 @@
         "pos": "명사",
         "mean": "임박, 절박"
       }
-    ]
+    ],
+    "origin": "im(위로, 향해) + minere(튀어나오다) → '머리 위로 튀어나와 걸려 있는' → 곧 닥칠 듯한 → 임박한. eminent(저명한)와 철자 한 글자 차이입니다."
   },
   {
     "root": "pro + min (돌출하다)",
@@ -124,6 +134,7 @@
         "pos": "명사",
         "mean": "두드러짐, 명성, 유명함, 돌출"
       }
-    ]
+    ],
+    "origin": "pro(앞으로) + minere(튀어나오다) → '앞으로 툭 튀어나온' → 두드러진, 저명한."
   }
 ]

@@ -3,60 +3,70 @@
     "word": "simplex",
     "mean": "단순한",
     "root": "ple/plex/ply (접다)",
-    "tag": "plex / ply (접다)"
+    "tag": "plex / ply (접다)",
+    "origin": "라틴어 sim(하나) + plex(접다) → '한 번만 접힌' → 단순한. 겹이 하나뿐이니 복잡할 게 없다는 뜻입니다."
   },
   {
     "word": "simplicity",
     "mean": "단순함",
     "root": "ple/plex/ply (접다)",
-    "tag": "plex / ply (접다)"
+    "tag": "plex / ply (접다)",
+    "origin": "simplex와 같은 뿌리 simplex(한 겹의)에서 온 simple + 명사형 -ity → 단순함."
   },
   {
     "word": "complex",
     "mean": "복잡한",
     "root": "ple/plex/ply (접다)",
-    "tag": "plex / ply (접다)"
+    "tag": "plex / ply (접다)",
+    "origin": "com(함께) + plex(접다·엮다) → '여러 겹이 함께 엮인' → 복잡한. 실이 얽혀 꼬인 모습을 떠올리면 됩니다."
   },
   {
     "word": "multiplex",
     "mean": "다중의",
     "root": "ple/plex/ply (접다)",
-    "tag": "plex / ply (접다)"
+    "tag": "plex / ply (접다)",
+    "origin": "multi(많은) + plex(접다) → '여러 겹으로 접힌' → 다중의. 여러 상영관을 가진 멀티플렉스 극장도 같은 말입니다."
   },
   {
     "word": "perplex",
     "mean": "당혹스럽게 하다",
     "root": "ple/plex/ply (접다)",
-    "tag": "plex / ply (접다)"
+    "tag": "plex / ply (접다)",
+    "origin": "per(완전히) + plex(엮다) → '완전히 얽히게 하다' → 머릿속을 엉키게 하다 → 당혹스럽게 하다."
   },
   {
     "word": "duplex",
     "mean": "이중의",
     "root": "ple/plex/ply (접다)",
-    "tag": "plex / ply (접다)"
+    "tag": "plex / ply (접다)",
+    "origin": "du(둘) + plex(접다) → '두 겹의' → 이중의. 2층 복층 주택(듀플렉스)도 여기서 나왔습니다."
   },
   {
     "word": "triplex",
     "mean": "삼중의",
     "root": "ple/plex/ply (접다)",
-    "tag": "plex / ply (접다)"
+    "tag": "plex / ply (접다)",
+    "origin": "tri(셋) + plex(접다) → '세 겹의' → 삼중의."
   },
   {
     "word": "ply",
     "mean": "겹",
     "root": "ple/plex/ply (접다)",
-    "tag": "plex / ply (접다)"
+    "tag": "plex / ply (접다)",
+    "origin": "라틴어 plicare(접다)가 프랑스어 plier를 거쳐 온 말 → 접힌 한 장 → 겹. 합판(plywood)은 겹겹이 붙인 나무판입니다."
   },
   {
     "word": "pliers",
     "mean": "펜치",
     "root": "ple/plex/ply (접다)",
-    "tag": "plex / ply (접다)"
+    "tag": "plex / ply (접다)",
+    "origin": "ply(접다·구부리다) + -er(도구) → '구부리는 도구' → 펜치."
   },
   {
     "word": "replenish",
     "mean": "보충하다",
     "root": "ple/plex/ply (채우다)",
-    "tag": "ple (채우다)"
+    "tag": "ple (채우다)",
+    "origin": "re(다시) + plen(가득한, 라틴어 plenus) → '다시 가득 채우다' → 보충하다. plex(접다)가 아니라 ple(채우다) 계열입니다."
   }
 ]

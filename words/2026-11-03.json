@@ -1,0 +1,115 @@
+[
+  {
+    "root": "oxy (날카로운·신) + ide",
+    "tag": "acu / oxy (날카로운)",
+    "forms": [
+      {
+        "word": "oxide",
+        "pos": "명사",
+        "mean": "산화물"
+      },
+      {
+        "word": "oxidize",
+        "pos": "동사",
+        "mean": "산화시키다, 산화하다, 녹슬다"
+      },
+      {
+        "word": "oxidation",
+        "pos": "명사",
+        "mean": "산화, 산화 작용"
+      }
+    ],
+    "origin": "그리스어 oxys(날카로운, 신)에서 온 oxygen(산소) + -ide(화합물) → 산소 화합물 → 산화물. oxidize(산화시키다), oxidation(산화)이 이어집니다."
+  },
+  {
+    "word": "dioxide",
+    "pos": "명사",
+    "mean": "이산화물, 이산화탄소",
+    "root": "di (둘) + oxide",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "di(둘) + oxide(산화물) → 산소 원자 두 개가 붙은 산화물 → 이산화물. carbon dioxide는 이산화탄소입니다."
+  },
+  {
+    "word": "oxygen",
+    "pos": "명사",
+    "mean": "산소",
+    "root": "oxy (신) + gen (만드는)",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "그리스어 oxys(신, 날카로운) + -gen(만드는) → '산을 만드는 것'. 18세기 라부아지에가 산소가 모든 산의 성분이라고 믿고 붙인 이름입니다(이 가정은 나중에 틀린 것으로 밝혀짐)."
+  },
+  {
+    "word": "ache",
+    "pos": "명사/동사",
+    "mean": "아픔, 통증, 쑤시다, 아프다, 갈망하다",
+    "root": "고대 영어 acan",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "고대 영어 acan(아프다)에서 온 순수 영어 단어 → 쑤시다, 아픔. acu(날카로운) 계열과는 어원이 다르니 소리로만 연결하세요."
+  },
+  {
+    "root": "acer (날카로운)",
+    "tag": "acu / oxy (날카로운)",
+    "forms": [
+      {
+        "word": "eager",
+        "pos": "형용사",
+        "mean": "열망하는, 간절히 바라는, 열심인"
+      },
+      {
+        "word": "eagerness",
+        "pos": "명사",
+        "mean": "열망, 열의, 열심"
+      }
+    ],
+    "origin": "라틴어 acer(날카로운, 매운)가 고대 프랑스어 aigre(시큼한, 날카로운)를 거쳐 → 마음이 날이 선 듯 → 열망하는, 간절한."
+  },
+  {
+    "root": "acer (날카로운)",
+    "tag": "acu / oxy (날카로운)",
+    "forms": [
+      {
+        "word": "acrimony",
+        "pos": "명사",
+        "mean": "신랄함, 악감정, 원한, 표독스러움"
+      },
+      {
+        "word": "acrimonious",
+        "pos": "형용사",
+        "mean": "신랄한, 험악한, 표독스러운"
+      }
+    ],
+    "origin": "라틴어 acer(날카로운, 신) → acrimonia(신랄함) → 말이 날카롭고 쓴 → 신랄함, 악감정."
+  },
+  {
+    "word": "acrid",
+    "pos": "형용사",
+    "mean": "매캐한, 코를 찌르는, 쓴, 신랄한",
+    "root": "acer (날카로운)",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "라틴어 acer(날카로운, 매운) + -id → 코를 찌르는 → (냄새·맛이) 매캐한, 쓴."
+  },
+  {
+    "root": "ex + acerbus (쓴)",
+    "tag": "acu / oxy (날카로운)",
+    "forms": [
+      {
+        "word": "exacerbate",
+        "pos": "동사",
+        "mean": "악화시키다, 더 심하게 하다"
+      },
+      {
+        "word": "exacerbation",
+        "pos": "명사",
+        "mean": "악화"
+      }
+    ],
+    "origin": "ex(완전히) + acerbus(쓴, 날카로운, acer 계열) → '더 쓰고 날카롭게 만들다' → (상황을) 악화시키다."
+  },
+  {
+    "word": "acme",
+    "pos": "명사",
+    "mean": "절정, 정점, 전성기, 극치",
+    "root": "akmē (뾰족한 끝)",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "그리스어 akmē(뾰족한 끝, 정점) → 절정, 전성기. acu(날카로운)와 같은 인도유럽어 뿌리 *ak-입니다."
+  }
+]

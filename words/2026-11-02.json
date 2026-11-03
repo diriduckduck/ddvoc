@@ -13,21 +13,24 @@
         "pos": "명사",
         "mean": "자극성, 톡 쏘는 맛, 신랄함"
       }
-    ]
+    ],
+    "origin": "라틴어 pungere(찌르다) → 코·혀를 찌르는 → 톡 쏘는, 신랄한."
   },
   {
     "word": "punch",
     "pos": "동사/명사",
     "mean": "주먹으로 치다, 구멍을 뚫다, 펀치, 타격",
     "root": "pung (찌르다)",
-    "tag": "pung / punct (찌르다·점)"
+    "tag": "pung / punct (찌르다·점)",
+    "origin": "라틴어 punctiare(찌르다, pungere 계열)에서 구멍 뚫는 도구 punch가 나왔고, 거기서 '세게 치다'로 넓어졌습니다 → 펀치, 구멍을 뚫다."
   },
   {
     "word": "counterpunch",
     "pos": "명사/동사",
     "mean": "반격, 카운터펀치, 반격하다",
     "root": "counter (반대) + punch",
-    "tag": "pung / punct (찌르다·점)"
+    "tag": "pung / punct (찌르다·점)",
+    "origin": "counter(맞서는, 반대의) + punch(치기) → 맞받아치기 → 반격."
   },
   {
     "root": "punct (점)",
@@ -43,14 +46,16 @@
         "pos": "명사",
         "mean": "시간 엄수"
       }
-    ]
+    ],
+    "origin": "라틴어 punctum(찍힌 점) → '정확히 그 점에 맞는' → 시간을 엄수하는. 문장 부호(punctuation)도 같은 '점' 계열입니다."
   },
   {
     "word": "puncture",
     "pos": "명사/동사",
     "mean": "펑크, 구멍, 구멍을 내다, 찌르다",
     "root": "punct (찌르다)",
-    "tag": "pung / punct (찌르다·점)"
+    "tag": "pung / punct (찌르다·점)",
+    "origin": "라틴어 punctura(찌르기, pungere에서) → 찔린 구멍 → (타이어) 펑크, 구멍을 내다."
   },
   {
     "root": "acu (바늘) + punct (찌르다)",
@@ -66,7 +71,8 @@
         "pos": "명사",
         "mean": "침술사, 한의사"
       }
-    ]
+    ],
+    "origin": "acus(바늘, acu '날카로운' 계열) + punctura(찌르기) → '바늘로 찌르기' → 침술."
   },
   {
     "root": "dis + ap + point",
@@ -82,7 +88,8 @@
         "pos": "명사",
         "mean": "실망, 낙담"
       }
-    ]
+    ],
+    "origin": "dis(반대) + appoint(지정하다) → 원래 '자리(직책)에서 해임하다' → 기대한 자리를 빼앗다 → 실망시키다."
   },
   {
     "root": "ap + point",
@@ -98,7 +105,8 @@
         "pos": "명사",
         "mean": "약속, 예약, 임명, 지명"
       }
-    ]
+    ],
+    "origin": "ap(~에) + point(점) → '어떤 점에 딱 정하다' → 임명하다, (시간·장소를) 정하다. 그래서 appointment는 '정해 둔 약속'입니다."
   },
   {
     "root": "point (점)",
@@ -114,14 +122,16 @@
         "pos": "명사",
         "mean": "지시봉, 포인터, 조언, 지침"
       }
-    ]
+    ],
+    "origin": "라틴어 punctum(찍힌 점, pungere '찌르다'에서) → 점, 요점, 끝, 가리키다."
   },
   {
     "word": "pointless",
     "pos": "형용사",
     "mean": "무의미한, 쓸모없는, 요점 없는",
     "root": "point + less",
-    "tag": "pung / punct (찌르다·점)"
+    "tag": "pung / punct (찌르다·점)",
+    "origin": "point(요점) + -less(없는) → 요점이 없는 → 무의미한, 쓸모없는."
   },
   {
     "root": "oxy (날카로운) + moron (둔한)",
@@ -137,6 +147,7 @@
         "pos": "형용사",
         "mean": "모순 어법의, 모순된"
       }
-    ]
+    ],
+    "origin": "그리스어 oxys(날카로운, 영리한) + moros(둔한, 어리석은) → 단어 자체가 '똑똑한 바보'라는 모순 → 모순 어법(예: 소리 없는 아우성)."
   }
 ]

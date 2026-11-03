@@ -4,42 +4,48 @@
     "pos": "동사/명사",
     "mean": "잘게 다지다, 저미다, 다진 고기",
     "root": "min (작은)",
-    "tag": "min (작은)"
+    "tag": "min (작은)",
+    "origin": "라틴어 minutiare(잘게 하다, minutus '작게 된') → 고기를 잘게 다지다."
   },
   {
     "word": "mini",
     "pos": "명사/형용사",
     "mean": "소형, 소형의, 작은",
     "root": "min (작은)",
-    "tag": "min (작은)"
+    "tag": "min (작은)",
+    "origin": "miniature 또는 minimum을 줄인 20세기 영어 → 소형, 작은."
   },
   {
     "word": "minus",
     "pos": "전치사/형용사/명사",
     "mean": "빼기, ~을 뺀, 영하의, 마이너스, 불리한 점",
     "root": "min (작은)",
-    "tag": "min (작은)"
+    "tag": "min (작은)",
+    "origin": "라틴어 minus(더 적게) → 빼기, 마이너스, 불리한 점."
   },
   {
     "word": "minute",
     "pos": "명사/형용사",
     "mean": "분, 잠깐, 순간, 회의록, 극히 작은, 미세한, 상세한",
     "root": "min (작은)",
-    "tag": "min (작은)"
+    "tag": "min (작은)",
+    "origin": "라틴어 minutus(작게 나눈) → 한 시간을 작게 나눈 단위 → 분. 발음을 바꿔 [마이뉴트]로 읽으면 '극히 작은, 미세한'입니다."
   },
   {
     "word": "pun",
     "pos": "명사/동사",
     "mean": "말장난, 동음이의어 익살, 말장난하다",
     "root": "pun (벌)",
-    "tag": "pen / pun (벌·후회)"
+    "tag": "pen / pun (벌·후회)",
+    "origin": "17세기에 갑자기 등장한 말로 어원이 확실하지 않습니다 → 말장난. punish(벌하다)와는 관계가 확인되지 않으니 묶어서 외우지 마세요."
   },
   {
     "word": "penitentiary",
     "pos": "명사",
     "mean": "교도소, 감옥",
     "root": "pen (벌·후회)",
-    "tag": "pen / pun (벌·후회)"
+    "tag": "pen / pun (벌·후회)",
+    "origin": "라틴어 paenitentia(뉘우침) → 죄를 뉘우치게 하는 곳 → 교도소. 원래 교회의 고해·참회 장소를 가리켰습니다."
   },
   {
     "root": "pen (벌·후회)",
@@ -55,20 +61,23 @@
         "pos": "명사",
         "mean": "뉘우침, 참회, 회개"
       }
-    ]
+    ],
+    "origin": "라틴어 paenitere(후회하다, poena '벌'과 연결) → 뉘우치는, 참회하는."
   },
   {
     "word": "impenitent",
     "pos": "형용사",
     "mean": "뉘우치지 않는, 회개하지 않는",
     "root": "im (부정) + pen (벌·후회)",
-    "tag": "pen / pun (벌·후회)"
+    "tag": "pen / pun (벌·후회)",
+    "origin": "im(아닌) + penitent(뉘우치는) → 뉘우치지 않는."
   },
   {
     "word": "penance",
     "pos": "명사",
     "mean": "속죄, 참회, 고행",
     "root": "pen (벌·후회)",
-    "tag": "pen / pun (벌·후회)"
+    "tag": "pen / pun (벌·후회)",
+    "origin": "라틴어 paenitentia(뉘우침)가 고대 프랑스어 penance로 → 죄를 뉘우치며 스스로 치르는 벌 → 속죄, 고행."
   }
 ]

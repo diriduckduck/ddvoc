@@ -50,6 +50,10 @@
         }
         .word-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
         .word-text { font-size: 1.15rem; font-weight: 700; color: #0f172a; }
+        .origin-box {
+            margin-top: 6px; padding: 8px 10px; border-radius: 8px; background: #fef2f2;
+            color: #7f1d1d; font-weight: 500; font-size: 0.85rem; line-height: 1.5;
+        }
         .review-banner {
             position: sticky; top: 0; z-index: 10;
             background: #fff7ed; border: 1px solid #fdba74; border-radius: 14px;
@@ -207,7 +211,12 @@
 
     // ---- 오답 노트: 틀리면 쌓이고, 어디서든 맞히면 빠짐 ----
     function loadWrongQuiz() {
-        const list = Object.values(load('ddvoc-wrong', {}));
+        // 예전에 저장된 오답에도 최신 어원 설명을 붙임
+        const originOf = {};
+        Object.values(vocabDB).forEach(items => items.forEach(it =>
+            (it.forms || [it]).forEach(f => { originOf[f.word] = it.origin; })));
+        const list = Object.values(load('ddvoc-wrong', {}))
+            .map(w => ({ ...w, origin: originOf[w.word] || w.origin }));
         document.getElementById('dateSelect').value = '';
         document.getElementById('rootSelect').value = '';
         currentMode = { type: 'wrong' };
@@ -295,7 +304,7 @@
     function pickForm(item) {
         if (!item.forms) return item;
         const f = item.forms[Math.floor(Math.random() * item.forms.length)];
-        return { ...f, root: item.root, note: item.note };
+        return { ...f, root: item.root, note: item.note, tag: item.tag, origin: item.origin };
     }
 
     function renderQuiz(list) {
@@ -355,10 +364,17 @@
                 correctCount++;
                 delete wrong[item.word];
             } else {
-                wrong[item.word] = { word: item.word, mean: item.mean, tag: item.tag,
+                wrong[item.word] = { word: item.word, mean: item.mean, tag: item.tag, origin: item.origin,
                                      miss: ((wrong[item.word] || {}).miss || 0) + 1 };
                 resDiv.className = "result-box incorrect";
-                resDiv.innerText = `❌ 오답 (정답: ${item.mean})`;
+                resDiv.innerHTML = '';
+                resDiv.appendChild(document.createTextNode(`❌ 오답 (정답: ${item.mean})`));
+                if (item.origin) {
+                    const o = document.createElement('div');
+                    o.className = 'origin-box';
+                    o.innerText = `🔎 어원: ${item.origin}`;
+                    resDiv.appendChild(o);
+                }
             }
         });
 
