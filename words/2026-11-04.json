@@ -1,0 +1,117 @@
+[
+  {
+    "word": "acidulous",
+    "pos": "형용사",
+    "mean": "약간 신, 시큼한, 신랄한, 퉁명스러운",
+    "root": "acid (신) + ulous",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "라틴어 acidulus(약간 신, acidus '신'의 축소형) → 약간 시큼한, 말이 약간 신랄한. -ulous는 '조금 ~한'이라는 작은 느낌을 줍니다."
+  },
+  {
+    "root": "hyper (넘치는) + acid",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "hyper(지나친, 그리스어 '위로 넘어') + acid(산) → 산이 지나친 → 위산 과다(의). 하이퍼인플레이션의 hyper와 같습니다.",
+    "forms": [
+      {
+        "word": "hyperacid",
+        "pos": "형용사",
+        "mean": "위산 과다의, 산이 과다한"
+      },
+      {
+        "word": "hyperacidity",
+        "pos": "명사",
+        "mean": "위산 과다, 과산증"
+      }
+    ]
+  },
+  {
+    "word": "antacid",
+    "pos": "명사/형용사",
+    "mean": "제산제, 산을 중화하는",
+    "root": "anti (맞서는) + acid",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "anti(맞서는) + acid(산) → 산에 맞서는 것 → 제산제(위산을 중화하는 약). anti의 i가 빠진 형태입니다."
+  },
+  {
+    "root": "acer (날카로운)",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "라틴어 acidus(신, 시큼한)는 acere(시다)에서 왔고, acer(날카로운)·acu와 같은 뿌리 *ak-입니다. 혀를 '찌르는' 맛 → 신맛 → 산(酸).",
+    "forms": [
+      {
+        "word": "acid",
+        "pos": "명사/형용사",
+        "mean": "산, 신, 산성의, 신랄한"
+      },
+      {
+        "word": "acidic",
+        "pos": "형용사",
+        "mean": "산성의, 신"
+      },
+      {
+        "word": "acidity",
+        "pos": "명사",
+        "mean": "산성, 산도, 신맛"
+      },
+      {
+        "word": "acidify",
+        "pos": "동사",
+        "mean": "산성화하다, 시게 하다"
+      },
+      {
+        "word": "acidification",
+        "pos": "명사",
+        "mean": "산성화"
+      }
+    ]
+  },
+  {
+    "root": "acu (날카로운)",
+    "tag": "acu / oxy (날카로운)",
+    "origin": "라틴어 acuere(날카롭게 하다)의 과거분사 acutus(날카로워진) → 날카로운, 예리한, 급성의. acute angle(예각), acute disease(급성 질환) 모두 '뾰족함'에서 나왔습니다.",
+    "forms": [
+      {
+        "word": "acute",
+        "pos": "형용사",
+        "mean": "급성의, 예리한, 극심한, 날카로운"
+      },
+      {
+        "word": "acuteness",
+        "pos": "명사",
+        "mean": "예리함, 날카로움, 격렬함"
+      }
+    ]
+  },
+  {
+    "word": "dessert",
+    "pos": "명사",
+    "mean": "디저트, 후식",
+    "root": "des (떼어 내다) + servir (섬기다)",
+    "tag": "serv (섬기다·지키다)",
+    "origin": "프랑스어 desservir(des '치우다' + servir '시중들다') → 식사 시중을 마치고 상을 치운 뒤 내오는 것 → 후식. 사막 desert(s 하나)와 헷갈리면 '디저트는 두 번 먹고 싶어서 s가 둘'로 외우세요."
+  },
+  {
+    "word": "reservoir",
+    "pos": "명사",
+    "mean": "저수지, 저장소, 보고, 축적",
+    "root": "re (뒤에) + servare (지키다)",
+    "tag": "serv (섬기다·지키다)",
+    "origin": "프랑스어 réservoir(따로 보관해 두는 곳, réserver '비축하다') → 저수지, 저장소, 보고. reserve와 같은 뿌리입니다."
+  },
+  {
+    "root": "re (뒤에) + servare (지키다)",
+    "tag": "serv (섬기다·지키다)",
+    "origin": "라틴어 re(뒤에, 따로) + servare(지키다, 보존하다) → '뒤에 따로 지켜 두다' → 예약하다, 비축하다. dessert의 servire(섬기다)와는 비슷하지만 다른 동사입니다.",
+    "forms": [
+      {
+        "word": "reserve",
+        "pos": "동사/명사",
+        "mean": "예약하다, 남겨 두다, 비축하다, 비축, 보호구역, 신중함"
+      },
+      {
+        "word": "reservation",
+        "pos": "명사",
+        "mean": "예약, 보류, 의구심, 보호구역"
+      }
+    ]
+  }
+]
